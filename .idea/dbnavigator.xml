@@ -5,6 +5,22 @@
     <value-preview-text-wrapping value="false" />
     <value-preview-pinned value="false" />
   </component>
+  <component name="DBNavigator.Project.DataExportManager">
+    <export-instructions>
+      <create-header value="true" />
+      <friendly-headers value="false" />
+      <quote-values-containing-separator value="true" />
+      <quote-all-values value="false" />
+      <value-separator value="" />
+      <file-name value="" />
+      <file-location value="" />
+      <scope value="GLOBAL" />
+      <destination value="FILE" />
+      <format value="EXCEL" />
+      <charset value="windows-1254" />
+      <charset value="windows-1254" />
+    </export-instructions>
+  </component>
   <component name="DBNavigator.Project.DatabaseBrowserManager">
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
@@ -13,14 +29,19 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="f6e40851-b490-4bd7-8ba4-041fe54afc33">
-      <console name="heallife" type="STANDARD" schema="heallife_hospitaltraining" session="Main" />
+      <console name="heallife" type="STANDARD" schema="heallife_hospitaltraining" session="Main"><![CDATA[use sys;
+SELECT  start_time,end_time
+FROM    heallife_hospitaltraining.doctor_shift
+WHERE   id='2' , day='Tuesday' ;]]></console>
     </connection>
     <connection id="e8681292-a350-4fa9-9d93-16586d6cd501">
       <console name="heallıfe3" type="STANDARD" schema="heallife_hospitaltraining" session="Main" />
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
-    <last-used-providers />
+    <last-used-providers>
+      <object-type object-type="TABLE" editor-provider="DATA" />
+    </last-used-providers>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files />
@@ -44,7 +65,21 @@
       </filter>
     </filter-actions>
     <filter-actions connection-id="f6e40851-b490-4bd7-8ba4-041fe54afc33" dataset="heallife_hospitaltraining.roles" active-filter-id="" />
-    <filter-actions connection-id="f6e40851-b490-4bd7-8ba4-041fe54afc33" dataset="heallife_hospitaltraining.appointment_payment" active-filter-id="" />
+    <filter-actions connection-id="f6e40851-b490-4bd7-8ba4-041fe54afc33" dataset="heallife_hospitaltraining.discharge_card" active-filter-id="e0344a21-6105-4457-b801-8785229017a7">
+      <filter id="e0344a21-6105-4457-b801-8785229017a7" name="1" temporary="false" custom-name="false" type="basic" join-type="AND">
+        <condition column="id" operator="&gt;" value="1" active="true" />
+      </filter>
+    </filter-actions>
+    <filter-actions connection-id="f6e40851-b490-4bd7-8ba4-041fe54afc33" dataset="heallife_hospitaltraining.doctor_shift" active-filter-id="88ef3ad7-2c0d-46d3-9488-5f30c552f27a">
+      <filter id="88ef3ad7-2c0d-46d3-9488-5f30c552f27a" name="calısma" temporary="false" custom-name="true" type="basic" join-type="AND">
+        <condition column="staff_id" operator="=" value="2" active="true" />
+      </filter>
+    </filter-actions>
+    <filter-actions connection-id="f6e40851-b490-4bd7-8ba4-041fe54afc33" dataset="heallife_hospitaltraining.appointment_payment" active-filter-id="5b67a63f-1b1b-478b-a252-99a861a59d4c">
+      <filter id="5b67a63f-1b1b-478b-a252-99a861a59d4c" name="1" temporary="false" custom-name="false" type="basic" join-type="AND">
+        <condition column="id" operator="&gt;" value="1" active="true" />
+      </filter>
+    </filter-actions>
     <filter-actions connection-id="f6e40851-b490-4bd7-8ba4-041fe54afc33" dataset="heallife_hospitaltraining.bed" active-filter-id="" />
     <filter-actions connection-id="f6e40851-b490-4bd7-8ba4-041fe54afc33" dataset="heallife_hospitaltraining.death_report" active-filter-id="42ffdd71-ac22-4f9e-b5ab-9c9de3ba17be">
       <filter id="42ffdd71-ac22-4f9e-b5ab-9c9de3ba17be" name="death id 1" temporary="false" custom-name="true" type="basic" join-type="AND">
